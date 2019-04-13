@@ -1,0 +1,205 @@
+:root {
+  --alabaster: #f8f8f8;
+  --athens-gray: #f0f0f0;
+  --wild-sand: #f4f4f4;
+  --rolling-stone: #788487;
+  --mine-shaft: #333;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --black: #222;
+  --color1: #06857A;
+  --color2: #505cfd;
+  --color3: #007bff;
+  --color4: #ffc107;
+  --color5: #e12726;
+  --colorx: #6c757d;
+  --light: #f8f9fa;
+  --color8: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,
+                            BlinkMacSystemFont,
+                            "Segoe UI",
+                            Roboto,
+                            "Helvetica Neue",
+                            Arial,
+                            "Noto Sans",
+                            sans-serif,
+                            "Apple Color Emoji",
+                            "Segoe UI Emoji",
+                            "Segoe UI Symbol",
+                            "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular,
+                           Menlo,
+                           Monaco,
+                           Consolas,
+                           "Liberation Mono",
+                           "Courier New",
+                           monospace;
+  --square-size: 15px;
+  --week-width: calc(var(--square-size)*7);
+  --month-length: 30;
+}
+
+.ganttChart {
+
+}
+
+.graph {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: repeat(8, 70px);
+  color: #111;
+  font-family: var(--font-family-sans-serif);
+  padding: 20px;
+  border: 1px #e1e4e8 solid;
+  margin: 20px;
+}
+
+.fixedSide {
+  grid-auto-flow: column;
+  grid-template-rows: minmax(30px auto);
+  vertical-align: center;
+  font-family: var(--font-family-sans-serif);
+  font-size: 18px;
+}
+.odd {
+  grid-auto-flow: row;
+  grid-column-start: auto;
+  background: whitesmoke;
+}
+.scrollArea {
+  grid-column:2 / span 180;
+  grid-row:1/ span 8;
+  max-width: 1150px;
+
+  float: right;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: repeat(180, 15px);
+  grid-template-rows: repeat(8, 70px);
+
+}
+.month1 {
+  --monthlength: 31;
+}
+.month2 {
+  --monthlength: 28;
+}
+.month3 {
+  --monthlength: 31;
+}
+.month4 {
+  --monthlength: 30;
+}
+.month5 {
+  --monthlength: 31;
+}
+.month6 {
+  --monthlength: 30;
+}
+.months {
+  grid-column: 1/ span var(--monthlength);
+  grid-auto-flow: row;
+ /* grid-template-columns: 2/span 4, 5/ span 4, 9/ span 5, 14/ span 4, 18/ span 4;*/
+  grid-column-start: auto;
+  background: whiteSmoke;
+}
+.days {
+  grid-column: 1;
+  grid-row: 2;
+  grid-auto-flow: column;
+  grid-column-start: auto;
+  background: white;
+}
+.weekend {
+  grid-column: 1 auto;
+  grid-auto-flow: column;
+  grid-column-start: auto;
+  background: whitesmoke;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+}
+
+.barRow {
+    font-weight: 500;
+    text-align: left;
+    font-size: 14px;
+    min-height: 15px;
+    padding: 5px 12px;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.barRow:hover{
+  filter: brightness(65%);
+}
+
+/*Project 1*/
+.project1 {
+  grid-row: 3;
+  background-color: var(--color1);
+  color: white !important
+}
+
+/*Project 2*/
+.project2 {
+  grid-row: 4;
+  background-color: var(--color2);
+  color: white !important
+  }
+
+
+/*Project 3*/
+.project3 {
+  grid-row: 5;
+  background-color: var(--color3);
+  color: white  !important
+}
+
+/*Project 4*/
+.project4 {
+  grid-row: 6;
+  background-color: var(--color4);
+  color: white  !important
+}
+
+/*Project 5*/
+.project5 {
+  grid-row: 7;
+  background-color: var(--color5);
+  color: white  !important
+}
+
+/* Create shades of var color*/
+.type1 {
+  filter: brightness(130%);
+}
+.type2 {
+  filter: brightness(120%);
+}
+.type3 {
+  filter: brightness(100%);
+}
+.type4 {
+  filter: brightness(90%);
+}
+.type5 {
+  filter: brightness(80%);
+}
+.type6 {
+  filter: brightness(75%);
+}
