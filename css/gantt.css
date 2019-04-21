@@ -41,8 +41,14 @@
                            "Courier New",
                            monospace;
   --square-size: 15px;
-  --week-width: calc(var(--square-size)*7);
-  --month-length: 30;
+
+}
+p {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .ganttChart {
@@ -57,7 +63,7 @@
   font-family: var(--font-family-sans-serif);
   padding: 20px;
   border: 1px #e1e4e8 solid;
-  margin: 20px;
+ /* margin: 20px;*/
 }
 
 .fixedSide {
@@ -86,28 +92,10 @@
   grid-template-rows: repeat(8, 70px);
 
 }
-.month1 {
-  --monthlength: 31;
-}
-.month2 {
-  --monthlength: 28;
-}
-.month3 {
-  --monthlength: 31;
-}
-.month4 {
-  --monthlength: 30;
-}
-.month5 {
-  --monthlength: 31;
-}
-.month6 {
-  --monthlength: 30;
-}
+
 .months {
   grid-column: 1/ span var(--monthlength);
   grid-auto-flow: row;
- /* grid-template-columns: 2/span 4, 5/ span 4, 9/ span 5, 14/ span 4, 18/ span 4;*/
   grid-column-start: auto;
   background: whiteSmoke;
 }
@@ -143,6 +131,7 @@ body {
     border-radius: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+    filter: var(--brightness);
 }
 .barRow:hover{
   filter: brightness(65%);
@@ -150,14 +139,12 @@ body {
 
 /*Project 1*/
 .project1 {
-  grid-row: 3;
   background-color: var(--color1);
   color: white !important
 }
 
 /*Project 2*/
 .project2 {
-  grid-row: 4;
   background-color: var(--color2);
   color: white !important
   }
@@ -165,21 +152,18 @@ body {
 
 /*Project 3*/
 .project3 {
-  grid-row: 5;
   background-color: var(--color3);
   color: white  !important
 }
 
 /*Project 4*/
 .project4 {
-  grid-row: 6;
   background-color: var(--color4);
   color: white  !important
 }
 
 /*Project 5*/
 .project5 {
-  grid-row: 7;
   background-color: var(--color5);
   color: white  !important
 }
