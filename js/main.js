@@ -1,4 +1,4 @@
-
+/*
 let projects = [
     {
         3: 8, 
@@ -40,7 +40,8 @@ let projects = [
         89: 94,
         94: 174,
     }      
-]
+]*/
+
 
 /*fetch("./data/data.json")
     .then(response => response.json())
@@ -51,13 +52,16 @@ let projects = [
 });*/
 
 // Replace ./data.json with your JSON feed
-fetch('./data/data.json').then(response => {
-    return response.json();
-  }).then(data => {
+fetch('./data/data.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+//   })
     // Work with JSON data here
-    console.log(data);
+    // console.log(data);
+    // let projects = data;
   }).catch(err => {
-    // Do something for an error here
+    console.log("oh snap");
   });
   
 /* Define months & days*/
@@ -100,6 +104,8 @@ let x = 0;
 
 while (x<5) {
     let a = 0;
+    console.log("hello");
+    console.log(projects);
     let project = projects[x];
     let projectsvalues = Object.values(project);
     let projectskeys = Object.keys(project);

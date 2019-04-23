@@ -51,10 +51,6 @@ p {
   margin-inline-end: 0px;
 }
 
-.ganttChart {
-
-}
-
 .graph {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -82,7 +78,6 @@ p {
   grid-column:2 / span 180;
   grid-row:1/ span 8;
   max-width: 1150px;
-
   float: right;
   position: relative;
   overflow-x: scroll;
@@ -168,22 +163,3 @@ body {
   color: white  !important
 }
 
-/* Create shades of var color*/
-.type1 {
-  filter: brightness(130%);
-}
-.type2 {
-  filter: brightness(120%);
-}
-.type3 {
-  filter: brightness(100%);
-}
-.type4 {
-  filter: brightness(90%);
-}
-.type5 {
-  filter: brightness(80%);
-}
-.type6 {
-  filter: brightness(75%);
-}
